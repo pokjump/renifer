@@ -1,0 +1,23 @@
+body {
+    margin: 10px auto;
+    width: 850px;
+    font-family: Arial;
+    font-size: 18px;
+}
+.baner, .menu, #content {
+    outline: 1px solid;
+}
+.menu, #content {
+    float: left;
+    min-height: 300px;
+}
+.menu {
+    width: 40%
+}
+#content {
+    width: 60%;
+}
+
+a {
+    text-decoration: none;
+}
