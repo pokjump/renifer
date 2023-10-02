@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="czcionka.css">
+</head>
+<body>
+<div class="baner">
+    <img src="baner.png">
+</div>
+<div class="menu">
+    MENU<br>
+    <a href="#" onclick="strona('opis.html');">Opis</a><br>
+    <a href="#" onclick="strona('jtl.html');">Jaka to liczba?</a><br>
+    <a href="#" onclick="strona('jtl.html');">Liczby całkowite z zakresu</a>
+</div>
+<div id="content">
+   
+</div>
+
+<script>
+    function strona(url) {
+        var contentDiv = document.getElementById("content");
+        var prosba = new XMLHttpRequest();
+        
+        prosba.onreadystatechange = function () {
+            if (prosba.readyState === 4 && prosba.status === 200) {
+                contentDiv.innerHTML = prosba.responseText;
+            }
+        };
+        prosba.open("GET", url, true);
+        prosba.send();
+    }
+</script>
+
+</body>
+</html>
